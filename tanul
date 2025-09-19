@@ -6,7 +6,7 @@ from io import StringIO
 # --- Step 1: Extract ---
 print("--- Starting ETL Pipeline ---")
 print("Step 1: Extracting data from FRED...")
-fred = Fred(api_key='')
+fred = Fred(api_key='bc73806018ce4ec0ffa3f432d56b6852')
 series_id = 'PAYEMS'
 df = fred.get_series(series_id)
 jobs_df = pd.DataFrame(df, columns=['value']).reset_index().rename(columns={'index': 'date'})
